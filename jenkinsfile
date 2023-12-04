@@ -1,18 +1,23 @@
 @Library('my-shared-library') 
 
 pipeline{
-        agent any
 
-        stages {
-                stage ('Github'){
-                     steps{
-                        gitCheckout(branch: "main",
-                            url: "https://github.com/BRUNDA20/Java.git"
-                            )
+    agent any
+
+    stages{
+         
+        stage('Git Checkout'){
+                   
+            steps{
+            gitCheckout(
+                branch: "main",
+                url: "https://github.com/BRUNDA20/Java_app_3.0.git"
+            )
             }
         }
 }
 }
+
 
 
 
