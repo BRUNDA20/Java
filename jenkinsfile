@@ -1,1 +1,15 @@
+@Library('my-shared-library') 
+
+stages {
+    stage ('Github'){
+        steps{
+            gitCheckout(branch: "main",
+                url: "https://github.com/BRUNDA20/Java.git"
+            )
+            }
+        }
+}
+
+
+
 
