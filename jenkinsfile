@@ -9,10 +9,10 @@ pipeline{
         stage('Git Checkout'){
                    
             steps{
-            gitCheckout(
-                branch: "main",
+        
+                git branch: "main",
                 url: "https://github.com/BRUNDA20/Java_app_3.0.git"
-            )
+            
             }
         }
 }
